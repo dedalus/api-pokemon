@@ -39,9 +39,10 @@ export class PokemonService {
       return await this.pokemonRepository.findOneBy({
         name: name,
       });
-       
     } catch (error) {
-      throw new InternalServerErrorException({ message: 'pokemon no encontrado' });  
+      throw new InternalServerErrorException({
+        message: 'pokemon no encontrado',
+      });
     }
   }
 }
